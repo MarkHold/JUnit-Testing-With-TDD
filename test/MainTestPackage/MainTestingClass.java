@@ -43,4 +43,17 @@ public class MainTestingClass extends TestCase {
         }
     }
 
+    @Test
+    public void testCheckIfAgeIsValid() {
+
+        try {
+            Main main = new Main ();
+            main.setAge(-2);
+            fail();
+        }
+        catch(IllegalArgumentException e){
+            
+        }
+    }
+
 }

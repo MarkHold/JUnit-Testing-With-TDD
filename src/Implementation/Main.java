@@ -8,6 +8,8 @@ public class Main {
     private int weight;
 
     private int height;
+
+    private int age;
     public void setWeight(int w) {
 
         if(w <= 0) {
@@ -22,5 +24,10 @@ public class Main {
             throw new IllegalArgumentException();
         }
         this.height = h;
+    }
+
+    public void setAge(int a)
+    {
+
     }
 }
