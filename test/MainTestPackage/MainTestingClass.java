@@ -36,7 +36,7 @@ public class MainTestingClass extends TestCase {
 
         try {
             Main main = new Main();
-            main.setHeight(0);
+            main.setHeight(-5);
             fail();
         } catch (IllegalArgumentException e){
 

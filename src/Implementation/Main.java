@@ -10,14 +10,17 @@ public class Main {
     private int height;
     public void setWeight(int w) {
 
-        if(weight <= 0) {
+        if(w <= 0) {
             throw new IllegalArgumentException();
         }
         this.weight = w;
     }
 
-    public void setHeight(int h){
+    public void setHeight(int h) {
 
-    throw new IllegalArgumentException();
+        if (h <= 0) {
+            throw new IllegalArgumentException();
+        }
+        this.height = h;
     }
 }
