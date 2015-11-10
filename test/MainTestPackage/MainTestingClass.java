@@ -23,10 +23,11 @@ public class MainTestingClass extends TestCase {
 
         try {
             Main main = new Main();
-        main.setWeight(5);
+        main.setWeight(-5);
         fail();
         }
         catch(IllegalArgumentException e){
+
         }
     }
 

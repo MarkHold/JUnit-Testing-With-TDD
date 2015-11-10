@@ -9,6 +9,7 @@ public class Main {
 
     public void setWeight(int w) {
 
-        this.weight = w;
+            throw new IllegalArgumentException();
+
     }
 }
