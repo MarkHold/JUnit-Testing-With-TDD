@@ -28,6 +28,6 @@ public class Main {
 
     public void setAge(int a)
     {
-
+        throw new IllegalArgumentException();
     }
 }

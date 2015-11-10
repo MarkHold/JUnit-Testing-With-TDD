@@ -52,7 +52,7 @@ public class MainTestingClass extends TestCase {
             fail();
         }
         catch(IllegalArgumentException e){
-            
+
         }
     }
 
