@@ -28,6 +28,10 @@ public class Main {
 
     public void setAge(int a)
     {
-        throw new IllegalArgumentException();
+        if(a <= 0)
+        {
+            throw new IllegalArgumentException();
+        }
+        this.age = a;
     }
 }
