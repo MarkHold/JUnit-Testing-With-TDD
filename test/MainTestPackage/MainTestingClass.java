@@ -1,5 +1,6 @@
 package MainTestPackage;
 
+import Implementation.Main;
 import junit.framework.TestCase;
 
 /**
@@ -7,8 +8,8 @@ import junit.framework.TestCase;
  */
 public class MainTestingClass extends TestCase {
 
-    public void CheckingForClassTest() throws Exception
-    {
+    public void CheckingForClassTest() throws Exception {
+
         Main main = new Main();
         assertNotNull(main);
     }
