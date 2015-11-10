@@ -18,6 +18,6 @@ public class Main {
 
     public void setHeight(int h){
 
-
+    throw new IllegalArgumentException();
     }
 }
