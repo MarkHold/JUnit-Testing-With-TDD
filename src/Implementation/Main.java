@@ -7,11 +7,17 @@ public class Main {
 
     private int weight;
 
+    private int height;
     public void setWeight(int w) {
 
         if(weight <= 0) {
             throw new IllegalArgumentException();
         }
         this.weight = w;
+    }
+
+    public void setHeight(int h){
+
+
     }
 }

@@ -31,4 +31,16 @@ public class MainTestingClass extends TestCase {
         }
     }
 
+    @Test
+    public void testCheckingIfHeightIsValid() {
+
+        try {
+            Main main = new Main();
+            main.setHeight(0);
+            fail();
+        } catch (IllegalArgumentException e){
+
+        }
+    }
+
 }
