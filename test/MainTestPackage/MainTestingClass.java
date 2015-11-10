@@ -18,5 +18,16 @@ public class MainTestingClass extends TestCase {
         assertNotNull(main);
     }
 
+    @Test
+    public void testCheckingIfWeightIsValid(){
+
+        try {
+            Main main = new Main();
+        main.setWeight(5);
+        fail();
+        }
+        catch(IllegalArgumentException e){
+        }
+    }
 
 }
