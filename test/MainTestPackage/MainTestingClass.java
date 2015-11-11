@@ -58,7 +58,7 @@ public class MainTestingClass extends TestCase {
 
         }
     }
-    
+
 
     @Test
     public void testCountCalories(){
@@ -71,5 +71,18 @@ public class MainTestingClass extends TestCase {
         assertEquals(1730.0, main.countCalories(vikt, height, age));
 
     }
+
+    @Test
+    public void testCountCountCalories2(){
+
+        try{
+            Main main = new Main();
+            main.countCalories(0, 0, 0);
+            fail();
+
+        }
+        catch(IllegalArgumentException e){}
+    }
+
 
 }
