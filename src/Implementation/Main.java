@@ -40,6 +40,6 @@ public class Main {
 
     public void countCalories(int vikt, int height, int age, int BMR) {
 
-
+    throw  new IllegalArgumentException();
     }
 }
