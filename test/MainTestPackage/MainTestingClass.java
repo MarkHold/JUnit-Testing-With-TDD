@@ -36,6 +36,7 @@ public class MainTestingClass extends TestCase {
     @Test
     public void testCheckingIfHeightIsValid() {
 
+
         try {
             Main main = new Main();
             main.setHeight(-5);
@@ -57,24 +58,17 @@ public class MainTestingClass extends TestCase {
 
         }
     }
+    
 
     @Test
-    public void testBmrValidation(){
-
+    public void testCountCalories(){
         int vikt = 70;
         int height = 180;
         int age = 20;
-        int bmr = 0;
+        Main main = new Main();
 
-        try {
-            Main main = new Main();
-            main.countCalories(vikt, height, age, bmr);
-            fail();
-        }
-        catch(IllegalArgumentException e){
 
-        }
-
+        assertEquals(1730.0, main.countCalories(vikt, height, age));
 
     }
 

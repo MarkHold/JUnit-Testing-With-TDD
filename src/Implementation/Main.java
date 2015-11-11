@@ -11,7 +11,7 @@ public class Main {
 
     private int age;
 
-    private int BMR;
+    private int bmr;
 
     public void setWeight(int w) {
 
@@ -38,8 +38,13 @@ public class Main {
         this.age = a;
     }
 
-    public void countCalories(int vikt, int height, int age, int BMR) {
+    public double countCalories(int vikt, int height, int age){
+        double kcal = 10 * vikt + 6.25 * height - 5 * age + 5;
 
-    throw  new IllegalArgumentException();
+        if (kcal <= 0) {
+            throw new IllegalArgumentException();
+        }
+        return kcal;
     }
-}
+
+    }
