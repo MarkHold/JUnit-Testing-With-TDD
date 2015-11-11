@@ -10,6 +10,9 @@ public class Main {
     private int height;
 
     private int age;
+
+    private int BMR;
+
     public void setWeight(int w) {
 
         if(w <= 0) {
@@ -33,5 +36,10 @@ public class Main {
             throw new IllegalArgumentException();
         }
         this.age = a;
+    }
+
+    public void countCalories(int vikt, int height, int age, int BMR) {
+
+
     }
 }
