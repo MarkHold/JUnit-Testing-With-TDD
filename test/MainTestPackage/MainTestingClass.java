@@ -85,7 +85,7 @@ public class MainTestingClass extends TestCase {
     }
 
     @Test
-    public void testProteinCounterCheck()
+    public void testProteinCounterCheck()// a test method for counting protein intake
     {
         int vikt = 50;
         Main main = new Main();
