@@ -84,5 +84,14 @@ public class MainTestingClass extends TestCase {
         catch(IllegalArgumentException e){}
     }
 
+    @Test
+    public void testProteinCounterCheck()
+    {
+        int vikt = 50;
+        Main main = new Main();
+
+        assertEquals(50, main.countProtein(vikt));
+    }
+
 
 }

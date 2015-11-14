@@ -48,4 +48,8 @@ public class Main {
         return kcal;
     }
 
+    public int countProtein(int vikt){
+    return 0;
+    }
+
     }
