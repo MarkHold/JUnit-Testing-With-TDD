@@ -90,7 +90,7 @@ public class MainTestingClass extends TestCase {
         int vikt = 50;
         Main main = new Main();
 
-        assertEquals(50, main.countProtein(vikt));
+        assertEquals(500, main.countProtein(vikt));
     }
 
 

@@ -49,7 +49,10 @@ public class Main {
     }
 
     public int countProtein(int vikt){
-    return 0;
+        int protein = vikt*10;
+
+        return protein;
+
     }
 
     }
