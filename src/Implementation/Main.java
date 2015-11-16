@@ -65,7 +65,7 @@ public class Main {
     }
     public double countFats(double kcal){
 
-        return 0;
+        return (kcal*0.20)/9;
     }
 
     }
