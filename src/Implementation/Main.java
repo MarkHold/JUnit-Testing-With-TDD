@@ -55,4 +55,10 @@ public class Main {
 
     }
 
+    public int countCarbs(double kcal){
+
+        return 0;
+
+    }
+
     }
