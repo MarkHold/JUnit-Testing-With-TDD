@@ -48,16 +48,19 @@ public class Main {
         return kcal;
     }
 
-    public int countProtein(int vikt) //this method calculates the amount of protein intake you need per day
+    public int countProtein(int vikt) //this method calculates the amount of protein per day
     {
         int protein = vikt*10;
         return protein;
 
     }
 
-    public double countCarbs(double kcal){
+    public double countCarbs(double kcal)//this method calculates the amount of carbs per day
+    {
 
-        return (kcal*0.50)/4;
+        double carbs = (kcal*0.50)/4;
+
+        return carbs;
 
     }
 
