@@ -102,4 +102,14 @@ public class MainTestingClass extends TestCase {
 
         assertEquals(250.0, main.countCarbs(kcal));
     }
+
+    @Test
+    public void testFatCounter()
+    {
+        double kcal = 2001;
+
+        Main main = new Main();
+
+        assertEquals(44.46666666666667, main.countFats(kcal));
+    }
 }

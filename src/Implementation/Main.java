@@ -63,5 +63,9 @@ public class Main {
         return carbs;
 
     }
+    public double countFats(double kcal){
+
+        return 0;
+    }
 
     }
