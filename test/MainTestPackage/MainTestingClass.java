@@ -100,6 +100,6 @@ public class MainTestingClass extends TestCase {
 
         Main main = new Main();
 
-        assertEquals(240, main.countCarbs(kcal));
+        assertEquals(250.0, main.countCarbs(kcal));
     }
 }

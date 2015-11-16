@@ -55,9 +55,9 @@ public class Main {
 
     }
 
-    public int countCarbs(double kcal){
+    public double countCarbs(double kcal){
 
-        return 0;
+        return (kcal*0.50)/4;
 
     }
 
