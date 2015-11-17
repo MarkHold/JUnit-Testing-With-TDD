@@ -12,7 +12,7 @@ public class PracticalView {
 
     public void PrintResults()
     {
-         //System.out.print("welcome to the macro counting app");
+         System.out.print("welcome to the macro counting app");
 
     }
 }
