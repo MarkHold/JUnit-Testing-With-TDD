@@ -1,16 +1,23 @@
 package MainTestPackage;
 
-import Implementation.Main;
-import com.sun.media.sound.InvalidDataException;
+import Model.Main;
+import View.PracticalView;
 import junit.framework.TestCase;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
-import org.omg.CORBA.DynAnyPackage.InvalidValue;
+
+import static org.junit.Assert.*;
+
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 
 /**
  * Created by Markus on 10/11/15.
  */
-public class MainTestingClass extends TestCase {
+public class MainTestingClass{
+
 
 
     @Test
@@ -68,7 +75,7 @@ public class MainTestingClass extends TestCase {
         Main main = new Main();
 
 
-        assertEquals(1730.0, main.countCalories(vikt, height, age));
+        assertEquals(1730.0, main.countCalories(vikt, height, age), 0.5);
 
     }
 
@@ -100,7 +107,7 @@ public class MainTestingClass extends TestCase {
 
         Main main = new Main();
 
-        assertEquals(250.0, main.countCarbs(kcal));
+        assertEquals(250.0, main.countCarbs(kcal), 1);
     }
 
     @Test
@@ -110,6 +117,28 @@ public class MainTestingClass extends TestCase {
 
         Main main = new Main();
 
-        assertEquals(44.46666666666667, main.countFats(kcal));
+        assertEquals(44, main.countFats(kcal), 1);
     }
+
+    private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+
+    @Before
+    public void setUpStreams() {
+        System.setOut(new PrintStream(outContent));
+    }
+
+    @After
+    public void cleanUpStreams() {
+        System.setOut(null);
+    }
+
+
+    @Test
+    public void testPracticalViewConsole(){
+        PracticalView view = new PracticalView();
+        view.PrintResults();
+        assertEquals("welcome to the macro counting app", outContent.toString());
+    }
+
+
 }
