@@ -1,11 +1,11 @@
-package Implementation;
+package Model;
 
 /**
  * Created by Markus on 10/11/15.
  */
 public class Main {
 
-    private int weight;
+    private int vikt;
 
     private int height;
 
@@ -18,7 +18,7 @@ public class Main {
         if(w <= 0) {
             throw new IllegalArgumentException();
         }
-        this.weight = w;
+        this.vikt = w;
     }
 
     public void setHeight(int h) {
@@ -63,9 +63,8 @@ public class Main {
         return carbs;
 
     }
-    public double countFats(double kcal){
-
-
+    public double countFats(double kcal)//this method calculates the amount of fats per day
+    {
         double fats = (kcal*0.20)/9;
         return fats;
     }
