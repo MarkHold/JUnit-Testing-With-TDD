@@ -29,8 +29,11 @@ public class MuscleGain {
 
         this.height = h;
     }
-    public void setAge(int a){
-
+    public void setAge(int a)
+    {
+            throw new IllegalArgumentException();
     }
+
+
 
 }
