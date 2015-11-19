@@ -9,6 +9,8 @@ public class MuscleGain {
 
     private int height;
 
+    private int age;
+
 
 
     /*A method to take the weight in and check if its valid*/
@@ -31,7 +33,11 @@ public class MuscleGain {
     }
     public void setAge(int a)
     {
+        if(a <= 0 || a>= 150) {
+
             throw new IllegalArgumentException();
+        }
+        this.age = a;
     }
 
 

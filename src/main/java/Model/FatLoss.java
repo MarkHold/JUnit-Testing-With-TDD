@@ -31,7 +31,7 @@ public class FatLoss {
 
     public void setAge(int a)
     {
-        if(a <= 0)
+        if(a <= 0 || a>= 200)
         {
             throw new IllegalArgumentException();
         }
