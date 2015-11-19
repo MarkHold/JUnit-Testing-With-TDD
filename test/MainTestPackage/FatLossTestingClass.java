@@ -119,6 +119,7 @@ public class FatLossTestingClass {
         assertEquals(44, main.countFats(kcal), 1);
     }
 
+   /*
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
     @Before
@@ -138,7 +139,7 @@ public class FatLossTestingClass {
         view.PrintResults();
         assertEquals("welcome to the macro counting app", outContent.toString());
     }
-
+*/
 
 
 

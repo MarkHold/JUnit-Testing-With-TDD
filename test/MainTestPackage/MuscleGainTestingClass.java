@@ -19,7 +19,7 @@ public class MuscleGainTestingClass {
     public void testWeightValidation() throws Exception{
         try {
             MuscleGain gainz = new MuscleGain();
-            int w = -5;
+            int w = -879;
             gainz.setWeight(w);
             fail();
         }
@@ -28,6 +28,12 @@ public class MuscleGainTestingClass {
             }
 
         }
+
+    @Test
+    public void testHeightValidation() throws Exception
+    {
+
+    }
 
     }
 

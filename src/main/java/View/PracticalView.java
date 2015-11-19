@@ -6,9 +6,12 @@ package View;
 public class PracticalView {
 
 
+    public PracticalView(Printer printer) {
+    }
+
     public void PrintResults()
     {
-         System.out.print("welcome to the macro counting app");
+        // System.out.print("welcome to the macro counting app");
 
     }
 
