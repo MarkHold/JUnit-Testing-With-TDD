@@ -32,7 +32,15 @@ public class MuscleGainTestingClass {
     @Test
     public void testHeightValidation() throws Exception
     {
+            try{
+                MuscleGain gainz = new MuscleGain();
+                int h = -175;
+                gainz.setHeight(h);
+                fail();
+            }
+            catch(IllegalArgumentException e){
 
+            }
     }
 
     }

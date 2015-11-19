@@ -19,5 +19,8 @@ public class MuscleGain {
 
         this.weight = w;
     }
+    public void setHeight(int h){
+
+    }
 
 }
