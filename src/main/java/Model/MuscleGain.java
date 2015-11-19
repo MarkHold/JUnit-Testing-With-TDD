@@ -7,5 +7,6 @@ public class MuscleGain {
 
     public void setWeight(int w){
 
+        throw new IllegalArgumentException();
     }
 }
