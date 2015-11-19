@@ -3,7 +3,7 @@ package Model;
 /**
  * Created by Markus on 10/11/15.
  */
-public class Main {
+public class FatLoss {
 
     private int vikt;
 

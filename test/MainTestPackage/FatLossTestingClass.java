@@ -1,8 +1,7 @@
 package MainTestPackage;
 
-import Model.Main;
+import Model.FatLoss;
 import View.PracticalView;
-import junit.framework.TestCase;
 
 import org.junit.After;
 import org.junit.Before;
@@ -16,14 +15,14 @@ import java.io.PrintStream;
 /**
  * Created by Markus on 10/11/15.
  */
-public class MainTestingClass{
+public class FatLossTestingClass {
 
 
 
     @Test
     public void testCheckingForClass() throws Exception {
 
-        Main main = new Main();
+        FatLoss main = new FatLoss();
         assertNotNull(main);
     }
 
@@ -31,7 +30,7 @@ public class MainTestingClass{
     public void testCheckingIfWeightIsValid(){
 
         try {
-            Main main = new Main();
+            FatLoss main = new FatLoss();
         main.setWeight(-5);
         fail();
         }
@@ -45,7 +44,7 @@ public class MainTestingClass{
 
 
         try {
-            Main main = new Main();
+            FatLoss main = new FatLoss();
             main.setHeight(-5);
             fail();
         } catch (IllegalArgumentException e){
@@ -57,7 +56,7 @@ public class MainTestingClass{
     public void testCheckIfAgeIsValid() {
 
         try {
-            Main main = new Main ();
+            FatLoss main = new FatLoss();
             main.setAge(-2);
             fail();
         }
@@ -72,7 +71,7 @@ public class MainTestingClass{
         int vikt = 70;
         int height = 180;
         int age = 20;
-        Main main = new Main();
+        FatLoss main = new FatLoss();
 
 
         assertEquals(1730.0, main.countCalories(vikt, height, age), 0.5);
@@ -83,7 +82,7 @@ public class MainTestingClass{
     public void testCountCountCalories2(){
 
         try{
-            Main main = new Main();
+            FatLoss main = new FatLoss();
             main.countCalories(0, 0, 0);
             fail();
 
@@ -95,7 +94,7 @@ public class MainTestingClass{
     public void testProteinCounterCheck()// a test method for counting protein intake
     {
         int vikt = 50;
-        Main main = new Main();
+        FatLoss main = new FatLoss();
 
         assertEquals(500, main.countProtein(vikt));
     }
@@ -105,7 +104,7 @@ public class MainTestingClass{
     {
         double kcal = 2000;
 
-        Main main = new Main();
+        FatLoss main = new FatLoss();
 
         assertEquals(250.0, main.countCarbs(kcal), 1);
     }
@@ -115,7 +114,7 @@ public class MainTestingClass{
     {
         double kcal = 2001;
 
-        Main main = new Main();
+        FatLoss main = new FatLoss();
 
         assertEquals(44, main.countFats(kcal), 1);
     }
@@ -139,6 +138,8 @@ public class MainTestingClass{
         view.PrintResults();
         assertEquals("welcome to the macro counting app", outContent.toString());
     }
+
+
 
 
 }
