@@ -7,6 +7,8 @@ public class MuscleGain {
 
     private int weight;
 
+    private int height;
+
 
 
     /*A method to take the weight in and check if its valid*/
@@ -21,6 +23,11 @@ public class MuscleGain {
     }
     public void setHeight(int h){
 
+        if(h <= 0){
+            throw new IllegalArgumentException();
+        }
+
+        this.height = h;
     }
 
 }
