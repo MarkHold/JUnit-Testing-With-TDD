@@ -29,5 +29,8 @@ public class MuscleGain {
 
         this.height = h;
     }
+    public void setAge(int a){
+
+    }
 
 }
