@@ -41,9 +41,14 @@ public class MuscleGain {
     }
 
     public double countKcal(int weight, int height, int age){
-        double kcal = 10 * weight + 6.25 * height - 5 * age + 505;
+        double kcal = 10 * weight + 6.25 * height - 5 * age + 605;
 
         return kcal;
+    }
+
+    public double countProtein(double kcal){
+
+       return 0;
     }
 
 }
