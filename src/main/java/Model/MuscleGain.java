@@ -51,5 +51,9 @@ public class MuscleGain {
 
         return protein;
     }
+    public double countCarb(double kcal){
+
+      return 0;
+    }
 
 }
