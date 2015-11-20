@@ -84,6 +84,7 @@ public class MuscleGainTestingClass {
 
         MuscleGain gain = new MuscleGain();
 
+
         assertEquals(291, gain.countCarb(kcal), 0.75);
     }
 

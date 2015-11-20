@@ -59,7 +59,8 @@ public class MuscleGain {
 
     public double countFat(double kcal){
 
-        return 0;
+        double fats = (kcal * 0.1)/9;
+        return fats;
     }
 
 }
