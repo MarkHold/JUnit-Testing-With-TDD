@@ -57,4 +57,9 @@ public class MuscleGain {
         return carbs;
     }
 
+    public double countFat(double kcal){
+
+        return 0;
+    }
+
 }

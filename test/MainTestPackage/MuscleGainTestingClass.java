@@ -87,6 +87,15 @@ public class MuscleGainTestingClass {
         assertEquals(291, gain.countCarb(kcal), 0.75);
     }
 
+    @Test
+    public void testFats()
+    {
+        double kcal = 2330.0;
+
+        MuscleGain gain = new MuscleGain();
+
+        assertEquals(26, gain.countFat(kcal), 0.75);
+    }
 
 
 
