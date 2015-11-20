@@ -47,8 +47,9 @@ public class MuscleGain {
     }
 
     public double countProtein(double kcal){
+        double protein = (kcal * 0.40)/4;
 
-       return 0;
+        return protein;
     }
 
 }
