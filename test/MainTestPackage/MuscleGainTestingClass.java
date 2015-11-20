@@ -53,5 +53,19 @@ public class MuscleGainTestingClass {
         }
     }
 
+    @Test
+    public void testCalorieValidation()
+    {
+
+        int weight = 70;
+        int height = 180;
+        int age = 20;
+
+        MuscleGain gain = new MuscleGain();
+
+        assertEquals(2230.0, gain.countKcal(weight, height, age), 0.5);
+
+    }
+
     }
 

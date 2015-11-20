@@ -40,6 +40,8 @@ public class MuscleGain {
         this.age = a;
     }
 
-
+    public double countKcal(int weight, int height, int age){
+        return 0;
+    }
 
 }
