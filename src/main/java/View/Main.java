@@ -9,6 +9,10 @@ public class Main {
     }
 
     public static int getBoundIntegerFromUser(PracticalView asker) {
-       return 0;
+        int input = asker.ask("Hello and welcome, please Enter your weight!");
+        while (input < 0 || input > 200)
+
+            input = asker.ask("that is an invalid number, please try agian!");
+        return input;
     }
 }
