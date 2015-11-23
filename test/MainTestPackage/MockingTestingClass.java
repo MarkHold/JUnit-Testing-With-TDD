@@ -1,34 +1,36 @@
 package MainTestPackage;
 
 import View.*;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
-
-import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import static View.Main.getBoundIntegerFromUser;
+import static org.junit.Assert.*;
+import static org.mockito.Mockito.*;
+
 /**
  * Created by Markus on 17/11/15.
  */
 public class MockingTestingClass {
 
-
-    @Before
-    public void setUp(){
-
-
-    }
     @Test
-    public void testPracticalViewConsole(){
-        Printer printer = mock(Printer.class);
-        PracticalView view = new PracticalView(printer);
+    public void getsIntegerWhenWithinBoundsOfOneToTen() throws Exception {
+        PracticalView asker = mock(PracticalView.class);
+        when(asker.ask(anyString())).thenReturn(70);
 
-        view.PrintResults();
-
-        verify(printer, times(1)).println("welcome to the macro counting app");
+        assertEquals(getBoundIntegerFromUser(asker), 70);
     }
 
+   @Test
+    public void asksForNewIntegerWhenOutsideBoundsOfOneToTen() throws Exception {
+        PracticalView asker = mock(PracticalView.class);
+        when(asker.ask("Hello and welcome, please Enter your weight!")).thenReturn(-5);
+        when(asker.ask("that is an invalid number, please try agian!")).thenReturn(70);
+
+        getBoundIntegerFromUser(asker);
+
+        verify(asker).ask("that is an invalid number, please try agian!");
+    }
 
 }
