@@ -18,8 +18,9 @@ public class Main {
         loss.setHeight(h);
         gain.setHeight(h);
 
-        getAgeFromUser(new PracticalView(System.in, System.out));
-
+        int a = getAgeFromUser(new PracticalView(System.in, System.out));
+        loss.setAge(a);
+        gain.setAge(a);
     }
 
     public static int getBoundIntegerFromUser(PracticalView asker) {
@@ -31,20 +32,20 @@ public class Main {
     }
 
     public static int getHeightFromUser(PracticalView height) {
-        int input = height.ask("Now its time to enter your height!");
-        while (input < 0 || input > 250)
+        int HeightInput = height.ask("Now its time to enter your height!");
+        while (HeightInput < 0 || HeightInput > 250)
 
-            input = height.ask("that is an invalid number, please try again!");
-        return input;
+            HeightInput = height.ask("that is an invalid number, please try again!");
+        return HeightInput;
 
     }
 
     public static int getAgeFromUser(PracticalView age) {
-        int input = age.ask("We are almost done! Now please enter your age");
-        while (input < 0 || input > 250)
+        int AgeInput = age.ask("We are almost done! Now please enter your age");
+        while (AgeInput < 0 || AgeInput > 250)
 
-            input = age.ask("that is an invalid number, please try again!");
-        return input;
+            AgeInput = age.ask("that is an invalid number, please try again!");
+        return AgeInput;
     }
 
 
