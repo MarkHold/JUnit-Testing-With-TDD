@@ -14,7 +14,7 @@ public class Main {
         loss.setWeight(n);
         gain.setWeight(n);
 
-       //getHeightFromUser(new PracticalView(System.in, System.out));
+       getHeightFromUser(new PracticalView(System.in, System.out));
     }
 
     public static int getBoundIntegerFromUser(PracticalView asker) {
@@ -25,6 +25,14 @@ public class Main {
         return input;
     }
 
+    public static int getHeightFromUser(PracticalView height) {
+        int input = height.ask("Now its time to enter your height!");
+        while (input < 0 || input > 250)
+
+            input = height.ask("that is an invalid number, please try again!");
+        return input;
+
+    }
 
 
 }
