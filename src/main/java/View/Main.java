@@ -14,7 +14,9 @@ public class Main {
         loss.setWeight(n);
         gain.setWeight(n);
 
-       getHeightFromUser(new PracticalView(System.in, System.out));
+       int h = getHeightFromUser(new PracticalView(System.in, System.out));
+        loss.setHeight(h);
+        gain.setHeight(h);
     }
 
     public static int getBoundIntegerFromUser(PracticalView asker) {
