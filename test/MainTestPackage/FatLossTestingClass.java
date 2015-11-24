@@ -127,11 +127,6 @@ public class FatLossTestingClass {
         System.setOut(new PrintStream(outContent));
     }
 
-    @After
-    public void cleanUpStreams() {
-        System.setOut(null);
-    }
-
 
     @Test
     public void testPracticalViewConsole(){
