@@ -5,6 +5,7 @@ import View.*;
 import org.junit.Before;
 import org.junit.Test;
 
+import static View.Main.getAgeFromUser;
 import static View.Main.getBoundIntegerFromUser;
 import static View.Main.getHeightFromUser;
 import static org.junit.Assert.*;
@@ -58,7 +59,7 @@ public class MockingTestingClass {
         PracticalView age = mock(PracticalView.class);
         when(age.ask(anyString())).thenReturn(70);
 
-        assertEquals(getHeightFromUser(age), 70);
+        assertEquals(getAgeFromUser(age), 70);
     }
 
     @Test
@@ -67,7 +68,7 @@ public class MockingTestingClass {
         when(age.ask("We are almost done! Now please enter your age")).thenReturn(-5);
         when(age.ask("that is an invalid number, please try again!")).thenReturn(70);
 
-        getHeightFromUser(age);
+        getAgeFromUser(age);
 
         verify(age).ask("that is an invalid number, please try again!");
     }
