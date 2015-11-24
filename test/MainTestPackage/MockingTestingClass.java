@@ -53,4 +53,23 @@ public class MockingTestingClass {
         verify(height).ask("that is an invalid number, please try again!");
     }
 
+    @Test
+    public void getIntForAge() throws Exception {
+        PracticalView age = mock(PracticalView.class);
+        when(age.ask(anyString())).thenReturn(70);
+
+        assertEquals(getHeightFromUser(age), 70);
+    }
+
+    @Test
+    public void askForAge() throws Exception {
+        PracticalView age = mock(PracticalView.class);
+        when(age.ask("We are almost done! Now please enter your age")).thenReturn(-5);
+        when(age.ask("that is an invalid number, please try again!")).thenReturn(70);
+
+        getHeightFromUser(age);
+
+        verify(age).ask("that is an invalid number, please try again!");
+    }
+
 }

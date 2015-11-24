@@ -36,5 +36,12 @@ public class Main {
 
     }
 
+    public static int getAgeFromUser(PracticalView age) {
+       return 0;
+
+    }
+
+
+
 
 }
