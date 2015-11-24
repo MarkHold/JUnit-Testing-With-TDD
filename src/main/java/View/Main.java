@@ -12,6 +12,9 @@ public class Main {
         MuscleGain gain = new MuscleGain();
         int n = getBoundIntegerFromUser(new PracticalView(System.in, System.out));
         loss.setWeight(n);
+        gain.setWeight(n);
+
+       //getHeightFromUser(new PracticalView(System.in, System.out));
     }
 
     public static int getBoundIntegerFromUser(PracticalView asker) {
@@ -21,4 +24,7 @@ public class Main {
             input = asker.ask("that is an invalid number, please try agian!");
         return input;
     }
+
+
+
 }
