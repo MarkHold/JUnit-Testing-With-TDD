@@ -73,4 +73,24 @@ public class MockingTestingClass {
         verify(age).ask("that is an invalid number, please try again!");
     }
 
+    @Test
+    public void getIntforApp() throws Exception{
+        PracticalView app = mock(PracticalView.class);
+        when(app.ask(anyString())).thenReturn(70);
+
+        assertEquals(getAgeFromUser(app), 70);
+    }
+
+    @Test
+    public void askForApp() throws Exception {
+        PracticalView app = mock(PracticalView.class);
+        when(app.ask("Now its time to choose. If you want the macros for Fatloss, please enter the number 1," +
+                "if you want the macros for muscle gain, please enter the number 2")).thenReturn(-5);
+        when(app.ask("that is an invalid number, please try again!")).thenReturn(1);
+
+        getAgeFromUser(app);
+
+        verify(app).ask("that is an invalid number, please try again!");
+    }
+
 }
