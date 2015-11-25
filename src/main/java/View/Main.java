@@ -48,6 +48,16 @@ public class Main {
         return AgeInput;
     }
 
+    public static int getAppFromUser(PracticalView app) {
+        int appInput = app.ask("Now its time to choose. If you want the macros for Fatloss, please enter the number 1, if you want the macros for muscle gain, please enter the number 2");
+
+        while (appInput < 0 || appInput > 3)
+
+            appInput = app.ask("that is an invalid number, please try again!");
+        return appInput;
+
+    }
+
 
 
 
