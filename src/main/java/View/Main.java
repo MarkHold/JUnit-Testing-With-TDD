@@ -21,6 +21,7 @@ public class Main {
         int a = getAgeFromUser(new PracticalView(System.in, System.out));
         loss.setAge(a);
         gain.setAge(a);
+
     }
 
     public static int getBoundIntegerFromUser(PracticalView asker) {
@@ -58,7 +59,20 @@ public class Main {
 
     }
 
+    public static void Dicition(PracticalView app){
 
-
+     FatLoss losses = new FatLoss();
+        MuscleGain gainz = new MuscleGain();
+        if(Main.getAppFromUser(app) == 1){
+            System.out.println("The amount of protein you should eat is: "+ losses.countProtein(losses.setWeight(n)) );
+            System.out.println("The amount of carbs you should eat is: "+ losses.countCarbs(losses.countCalories(n,h,a)));
+            System.out.println("The amount of fats you should eat is: "+ losses.countFats(losses.countCalories(n, h, a)));
+        }
+        if(Main.getAppFromUser(app) == 2){
+            System.out.println("The amount of protein you should eat is: "+ gainz.countProtein(gainz.countKcal(n,h,a)));
+            System.out.println("The amount of carbs you should eat is: "+ gainz.countCarb(gainz.countKcal(n, h, a)));
+            System.out.println("The amount of fats you should eat is: "+ gainz.countFat(gainz.countKcal(n,h,a)));
+        }
+    }
 
 }
